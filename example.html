@@ -1,0 +1,28 @@
+<script src='gauge.js'></script>
+<canvas id='ui-gauge-total'></canvas>
+<script>
+var gaugeTotal;
+var totalOptions = {
+  label: "Active",
+  bands: [{
+    color: '#339BB9',
+    from: 0,
+    to: 5,
+  }],
+  value: 0,
+  min: 0,
+  max: 5,
+  majorTicks: 1,
+  minorTicks: 0,
+  // small ticks inside each major tick
+  greenFrom: 0,
+  greenTo: 0,
+  yellowFrom: 0,
+  yellowTo: 0,
+  redFrom: 0,
+  redTo: 0
+};
+
+// Draw gauge and use custom bands
+gaugeTotal = new Gauge(document.getElementById('ui-gauge-total'), totalOptions);
+</script>
